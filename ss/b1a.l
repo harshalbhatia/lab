@@ -32,3 +32,13 @@ int main(int argc, char *argv[])
 //     Character count = 37
 //     Space count = 6
 //     Line count = 2
+// OR
+// Execution:
+//     $ lex b1a.l 
+//     $ gcc lex.yy.c -ll
+//     $ ./a.out a4.txt                                                                                                   lab/git/master !
+// Output:
+//     Word count = 32
+//     Character count = 190
+//     Space count = 29
+//     Line count = 5

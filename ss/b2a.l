@@ -18,9 +18,9 @@ opr [+*/-]
                 }
             }
             return(0);
-        };
+        }
 ^{opnd}[\n] {
-                printf("Only operand\n");
+                printf("Only operand given.\n");
                 exit(0);
             }
 %%
