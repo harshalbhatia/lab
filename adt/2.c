@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include <unistd.h>
 
 int partition (int a[], int low, int high)
 {
@@ -11,8 +12,8 @@ int partition (int a[], int low, int high)
 	j = high + 1;
 	while (i <= j)
 	{
-		do {i += 1;} while (key >= a[i]);
-		do {j += 1;} while (key < a[j]);
+		do i++; while (key > a[i]);
+		do j--; while (key < a[j]);
 		if (i < j)
 		{
 			temp = a[i];
@@ -35,6 +36,8 @@ void quicksort(int a[], int low, int high)
 		quicksort(a, low, mid-1);
 		quicksort(a, mid+1, high);
 	}
+	// delay(1);
+	sleep(1);
 }
 
 int main()
@@ -44,9 +47,9 @@ int main()
 	clock_t end, start;
 	//clrscr();
 	low = 0;
-	high = n - 1;
-	printf("Enter the size of an array.\n");
+	printf("Enter the size of array:\n");
 	scanf("%d", &n);
+	high = n - 1;
 	for (i = 0; i < n; i++)
 	{
 		a[i] = rand();
